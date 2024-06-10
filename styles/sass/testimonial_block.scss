@@ -1,0 +1,136 @@
+.testimonial{
+    display: flex;
+    max-width: 1440px;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    padding: 50px;
+}
+
+.testimonial__tittle{
+    font-family: $mainFont;
+    font-weight: 900;
+    font-size: $font-size_h2;
+    text-align: center;
+    color: $testimonial-color;
+}
+
+.testimonial__wapper{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.testimonial__ellipse{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.testimonial__wapper__block{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.wapper_img{
+    width: 151px ;
+    height: 151px;
+    margin:  10px;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 343px;
+    height: 171px;
+    margin: 10px;
+}
+
+.block_tittle{
+    font-family: $mainFont;
+    font-weight: 700;
+    font-size: 28px;
+    color: $primary-text-color;
+}
+
+.block_text{
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 17px;
+    color: $primary-text-color;
+}
+
+/* $tablet */
+@media screen and ($mobile <= width <= $tablet){
+    .testimonial{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        }
+
+    .testimonial__wapper{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 450px;
+    }
+
+    .block{
+        display: inline-block;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 250px;
+    }
+
+        .testimonial__wapper__block{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .testimonial__ellipse{
+            display: none;
+        }
+}
+
+/* $mobile */
+@media screen and (max-width: $mobile) {
+    .testimonial{
+        display: flex;
+        align-self: start;
+        justify-content: start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 5% 0px 0px 7px;
+        }
+
+    .testimonial__wapper{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 450px;
+    }
+
+    .wapper_img{
+        display: none;
+    }
+
+    .testimonial__wapper__block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .block{
+        display: inline-block;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 250px;
+    }
+
+    .testimonial__ellipse{
+        display: none;
+    }
+}

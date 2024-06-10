@@ -1,0 +1,140 @@
+.about {
+  display: flex;
+  max-width: 1440px;
+  // margin-top: 80px; // это закомментила, т.к. все через padding общего блока about us //
+  //   gap: 30px;
+  padding: 80px 0 0 100px; // добавила //
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px; // убрала gap, увеличила margin //
+  justify-content: center;
+  gap: 30px;
+  width: 100%; // добавила чтобы текст растянулся больше вправо как в макете//
+}
+// исправила на размеры из макета 735px и 571px//
+.about__img {
+  width: 735px;
+  height: 571px;
+}
+
+.aboutUs__tittle {
+  font-family: $mainFont;
+  font-weight: 900;
+  font-size: $font-size_h2;
+  color: $primary-text-color;
+}
+
+.aboutUs__text {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 31px;
+  color: $primary-text-color;
+  text-align: justify; //добавила, чтоб текст вылез право//
+  width: 100%;
+}
+
+.aboutUs__more {
+  text-decoration: none;
+  font-family: $textFont;
+  font-weight: 600;
+  font-size: 24px;
+  color: $primary-text-color;
+}
+
+.aboutUs__more:hover {
+  color: rgb(150, 207, 240);
+}
+
+/* $tablet */
+@media screen and ($mobile <= width <= $tablet) {
+  .about {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+  }
+  .aboutUs {
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0 0 0;
+    margin-left: 0;
+    text-align: center;
+  }
+  .aboutUs p,
+  a {
+    text-align: center;
+  }
+  .about__img {
+    display: none;
+  }
+}
+
+/* $mobile */
+@media screen and (max-width: $mobile) {
+  .about {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 7px 0 7px;
+    padding: 20px 7px 0 7px;
+    max-width: 100%;
+  }
+
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .aboutUs h2,
+  p,
+  a {
+    text-align: center;
+    max-width: 80%;
+    align-self: center;
+  }
+  .aboutUs__more {
+    align-self: center;
+  }
+  .aboutUs__text {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .about__img {
+    display: none;
+  }
+  .aboutUs__tittle {
+    font-size: 44px;
+  }
+}
+
+//добавила медиа-запрос от планшета до 1160px//
+@media screen and ($tablet < width <= 1160px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+    margin-right: 100px;
+  }
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    max-width: 100%;
+  }
+  about__img {
+    max-width: 100%;
+  }
+  .aboutUs p {
+    text-align: center;
+  }
+}

@@ -1,0 +1,247 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 67px 0 97px 95px;
+
+  &__logo-logo {
+    max-width: 100%;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  &__menu {
+    text-decoration: none;
+    font-family: $textFont;
+    color: $primary-text-color;
+    font-size: $font-size_link;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 53px;
+
+    &:hover {
+      color: rgb(150, 207, 240);
+    }
+  }
+
+  &__menu-home {
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: $font-size_link;
+  }
+
+  &__search-box {
+    margin: 0;
+    float: right;
+    height: 35px;
+    border-radius: 40px;
+  }
+  &__search-btn {
+    margin: 0;
+    float: right;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__search-box:hover > &__search-txt {
+    width: 140px;
+    color: black;
+  }
+
+  &__search-txt {
+    margin: 0 5px;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    width: 0px;
+  }
+}
+//начало
+.solution {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+
+  &__wrapper {
+    width: 691px;
+    height: 550px;
+    background: linear-gradient(
+      91deg,
+      rgba(244, 246, 245, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+    position: absolute;
+
+    bottom: 95px;
+    right: 750px;
+  }
+  &__image {
+    position: relative;
+    height: 739px;
+    z-index: 1;
+  }
+  &-image img {
+    width: 100%;
+  }
+  &__wrapper_title {
+    font-size: clamp(10px, 4vw, $font-size_h2);
+    padding: 138px 93px 0 100px;
+  }
+  &__wrapper_text {
+    font-family: $textFont;
+    font-weight: 200;
+    font-size: clamp(10px, 4vw, 32px);
+    color: $primary-text-color;
+    padding: 0px 81px 139px 100px;
+    line-height: 39px;
+  }
+  &__arrow {
+    position: absolute;
+    z-index: 10;
+    align-self: flex-end;
+    width: clamp(132px, 2vw, 162px);
+    height: 56px;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(
+      91deg,
+      rgba(244, 246, 245, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
+  }
+  &_link {
+    align-self: center;
+  }
+  &__arrow img {
+    margin-top: 15px;
+  }
+}
+/* $tablet */
+@media screen and ($mobile<= width <= $tablet) {
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px 0;
+    gap: 20px;
+    background-color: rgba(37, 77, 77, 0.2);
+
+    &__menu {
+      margin: 0 15px;
+      font-size: clamp(12px, 4vw, 20px);
+    }
+
+    &__search-box {
+      display: none;
+    }
+  }
+
+  .solution {
+    display: flex;
+    justify-content: center;
+
+    &-image {
+      display: none;
+    }
+
+    &__image {
+      height: 100%;
+    }
+
+    &__wrapper {
+      position: static;
+      width: 100%;
+
+      background: linear-gradient(
+        91deg,
+        rgba(244, 246, 245, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      );
+    }
+
+    &__wrapper_title {
+      font-size: clamp(12px, 3vw, 35px);
+      width: 100%;
+      height: 5vh;
+      padding: 200px 50px 0 50px;
+      text-align: center;
+    }
+    &__wrapper_text {
+      font-size: clamp(12px, 3vw, 35px);
+      padding: 36px 50px 100px 50px;
+      text-align: center;
+      line-height: 30px;
+    }
+    &__arrow {
+      display: none;
+    }
+  }
+}
+/* $mobile */
+@media screen and (max-width: $mobile) {
+  .header {
+    flex-direction: column-reverse;
+    padding: 10px 0;
+    gap: 10px;
+    background-color: rgba(37, 77, 77, 0.2);
+
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 10px;
+      width: 100%;
+    }
+
+    &__menu:hover {
+      font-size: 32px;
+    }
+
+    &__search-box {
+      display: none;
+    }
+  }
+
+  .solution {
+    display: flex;
+    justify-content: center;
+
+    &-image {
+      display: none;
+    }
+    &__image {
+      height: 50%;
+    }
+
+    &__wrapper {
+      position: static;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        91deg,
+        rgba(244, 246, 245, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      );
+    }
+
+    &__wrapper_title {
+      font-size: clamp(14px, 3vw, 35px);
+      width: 100%;
+      padding: 50px 50px 0 50px;
+      text-align: center;
+    }
+    &__wrapper_text {
+      font-size: clamp(14px, 3vw, 35px);
+      width: 100%;
+      padding: 10px 50px 100px 50px;
+      text-align: center;
+      line-height: 20px;
+    }
+    &__arrow {
+      display: none;
+    }
+  }
+}
