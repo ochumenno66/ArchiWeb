@@ -9,6 +9,7 @@
 
     &:hover {
       transform: scale(1.5);
+      transition: all 0.6s;
     }
   }
   &__menu {
@@ -38,6 +39,7 @@
     border-radius: 40px;
   }
   &__search-btn {
+    width: 140px;
     margin: 0;
     float: right;
     height: 25px;
@@ -76,9 +78,9 @@
       rgba(255, 255, 255, 0.9) 100%
     );
     position: absolute;
-
+    left: 0;
+    z-index: 10;
     bottom: 95px;
-    right: 750px;
   }
   &__image {
     position: relative;
@@ -235,7 +237,7 @@
     }
     &__wrapper_text {
       font-size: clamp(14px, 3vw, 35px);
-      width: 100%;
+      max-width: 100%;
       padding: 10px 50px 100px 50px;
       text-align: center;
       line-height: 20px;

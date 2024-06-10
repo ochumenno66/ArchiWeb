@@ -87,6 +87,12 @@
   .project {
     padding: 7% 7px 0px 7px;
   }
+  .project__imgcontainer {
+    justify-content: center;
+  }
+  .project_image {
+    width: 100%;
+  }
   .project_img2,
   .project_img3,
   .project_img5,
@@ -99,6 +105,7 @@
     text-align: center;
   }
   .project__nav {
+    width: 100%;
     padding-top: 3%;
     max-width: 100%;
     flex-direction: column;
@@ -122,8 +129,9 @@
   .project {
     padding: 3% 0px 0px 7px;
   }
-  .project__header {
-    text-align: center;
+
+  .project_image {
+    width: 100%;
   }
   .project__imgcontainer p {
     text-align: center;
@@ -136,6 +144,7 @@
   }
   .project__nav {
     flex-direction: column;
+    width: 100%;
   }
   .project__nav a {
     padding-left: 0;
@@ -151,6 +160,7 @@
   .project_img6 {
     justify-self: left;
   }
+
   .project_image p {
     text-align: left;
   }
